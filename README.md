@@ -27,11 +27,7 @@ adonis key:generate
 Renomear .env.example para .env.
 Configurar acesso ao banco, exemplo:
 
-<<<<<<< HEAD
-```js
-=======
 ```bash
->>>>>>> developer
 DB_CONNECTION=pg 
 DB_HOST=127.0.0.1 
 DB_PORT=5432
