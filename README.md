@@ -42,7 +42,7 @@ DB_DATABASE=db_teleconsulta
 adonis serve --dev
 ```
 
-### Testar banco
+### Test BD
 
 ```bash
 adonis migration:run
