@@ -20,8 +20,10 @@ const Route = use('Route')
 //   return { greeting: 'Hello world in JSON' }
 // })
 
-Route.post('/admnistrativo', 'AdministrativoController.store')
+Route.post('/administrativo', 'AdministrativoController.store')
 Route.get('/administrativo', 'AdministrativoController.index')
 Route.get('/administrativo/:id', 'AdministrativoController.show')
 Route.put('/administrativo/:id', 'AdministrativoController.update')
 Route.delete('/administrativo/:id', 'AdministrativoController.destroy')
+
+Route.post('/sessions/administrativo', 'SessionAdministrativoController.store')

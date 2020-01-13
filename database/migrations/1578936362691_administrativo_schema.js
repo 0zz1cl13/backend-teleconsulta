@@ -10,7 +10,7 @@ class AdministrativoSchema extends Schema {
       table.string('nome', 254).notNullable()
       table.string('cpf', 11).notNullable().unique()
       table.string('email', 254).notNullable().unique()
-      table.string('senha', 60).notNullable()
+      table.string('password', 60).notNullable()
       table.string('contato', 16).notNullable()
       table.string('unidade', 254).notNullable()
       table.timestamps()

@@ -90,5 +90,17 @@ module.exports = {
     scheme: 'api',
     uid: 'email',
     password: 'password'
+  },
+
+  administrativo: {
+    serializer: 'lucid',
+    model: 'App/Models/Administrativo',
+    scheme: 'jwt',
+    uid: 'cpf',
+    password: 'password',
+    options: {
+      secret: Env.get('APP_KEY')
+    }
   }
+
 }
