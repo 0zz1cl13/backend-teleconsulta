@@ -27,12 +27,14 @@ adonis key:generate
 Renomear .env.example para .env.
 Configurar acesso ao banco, exemplo:
 
+```bash
 DB_CONNECTION=pg 
 DB_HOST=127.0.0.1 
 DB_PORT=5432
 DB_USER=postgres
 DB_PASSWORD=root
 DB_DATABASE=db_teleconsulta
+```
 
 ### Run project
 
