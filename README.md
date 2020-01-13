@@ -1,28 +1,47 @@
 # Adonis API application
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+API Rest da plataforma de teleconsulta.
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
-
-## Setup
-
-Use the adonis command to install the blueprint
+## Clone project
 
 ```bash
-adonis new yardstick --api-only
+git clone https://github.com/0zz1cl13/backend-teleconsulta.git
 ```
 
-or manually clone the repo and then run `npm install`.
+## Install dependencies 
 
+No diretório do projeto, backend-teleconsulta/
 
-### Migrations
+```bash
+npm install
+```
 
-Run the following command to run startup migrations.
+## Gerar chave privada 
 
-```js
+```bash
+adonis key:generate
+```
+
+## Config .env
+
+Renomear .env.example para .env.
+Configurar acesso ao banco, exemplo:
+
+DB_CONNECTION=pg 
+DB_HOST=127.0.0.1 
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=root
+DB_DATABASE=db_teleconsulta
+
+### Run project
+
+```bash
+adonis serve --dev
+```
+
+### Testar banco
+
+```bash
 adonis migration:run
 ```
