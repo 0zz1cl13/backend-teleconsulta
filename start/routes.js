@@ -16,8 +16,12 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
-})
+// Route.get('/', () => {
+//   return { greeting: 'Hello world in JSON' }
+// })
 
-Route.post('/admnistrativo', 'AdministrativoController.create')
+Route.post('/admnistrativo', 'AdministrativoController.store')
+Route.get('/administrativo', 'AdministrativoController.index')
+Route.get('/administrativo/:id', 'AdministrativoController.show')
+Route.put('/administrativo/:id', 'AdministrativoController.update')
+Route.delete('/administrativo/:id', 'AdministrativoController.destroy')

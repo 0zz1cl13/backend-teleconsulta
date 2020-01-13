@@ -20,6 +20,9 @@ class AdministrativoController {
    * @param {View} ctx.view
    */
   async index ({ request, response, view }) {
+    const admins = await Administrativo.all()
+
+    return admins
   }
 
   /**
@@ -31,7 +34,7 @@ class AdministrativoController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async create ({ request, response, view }) {
+  async store ({ request, response, view }) {
     const data = request.all()
 
     const administrativo = await Administrativo.create(data)
@@ -49,6 +52,9 @@ class AdministrativoController {
    * @param {View} ctx.view
    */
   async show ({ params, request, response, view }) {
+    const administrativo = await Administrativo.findOrFail(params.id)
+
+    return administrativo 
   }
 
   /**
@@ -60,6 +66,22 @@ class AdministrativoController {
    * @param {Response} ctx.response
    */
   async update ({ params, request, response }) {
+    const administrativo = await Administrativo.findOrFail(params.id)
+
+    const data = request.only([
+      'nome',
+      'cpf',
+      'email',
+      'senha',
+      'contato',
+      'unidade'
+    ])
+
+    administrativo.merge(data)
+
+    await administrativo.save()
+
+    return administrativo
   }
 
   /**
@@ -71,6 +93,9 @@ class AdministrativoController {
    * @param {Response} ctx.response
    */
   async destroy ({ params, request, response }) {
+    const administrativo = await Administrativo.findOrFail(params.id)
+
+    await administrativo.delete()
   }
 }
 
