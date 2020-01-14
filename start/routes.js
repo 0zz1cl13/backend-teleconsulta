@@ -20,14 +20,17 @@ const Route = use('Route')
 //   return { greeting: 'Hello world in JSON' }
 // })
 
+Route.post('/sessions/administrativo', 'SessionAdministrativoController.store')
+Route.post('/sessions/coordenador', 'SessionCoordenadorController.store')
+Route.post('/sessions/admin', 'SessionAdminController.store')
+
+Route.post('/admin', 'AdminController.store')
+
 Route.post('/administrativo', 'AdministrativoController.store')
 Route.get('/administrativo', 'AdministrativoController.index')
 Route.get('/administrativo/:id', 'AdministrativoController.show')
 Route.put('/administrativo/:id', 'AdministrativoController.update')
 Route.delete('/administrativo/:id', 'AdministrativoController.destroy')
-
-Route.post('/sessions/administrativo', 'SessionAdministrativoController.store')
-Route.post('/sessions/coordenador', 'SessionCoordenadorController.store')
 
 Route.post('/coordenador', 'CoordenadorController.store')
 Route.get('/coordenador', 'CoordenadorController.index')
