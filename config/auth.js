@@ -101,6 +101,16 @@ module.exports = {
     options: {
       secret: Env.get('APP_KEY')
     }
-  }
+  },
 
+  coordenador: {
+    serializer: 'lucid',
+    model: 'App/Models/Coordenador',
+    scheme: 'jwt',
+    uid: 'cpf',
+    password: 'password',
+    options: {
+      secret: Env.get('APP_KEY')
+    }
+  }
 }

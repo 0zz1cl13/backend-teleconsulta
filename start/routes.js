@@ -27,9 +27,11 @@ Route.put('/administrativo/:id', 'AdministrativoController.update')
 Route.delete('/administrativo/:id', 'AdministrativoController.destroy')
 
 Route.post('/sessions/administrativo', 'SessionAdministrativoController.store')
+Route.post('/sessions/coordenador', 'SessionCoordenadorController.store')
 
 Route.post('/coordenador', 'CoordenadorController.store')
 Route.get('/coordenador', 'CoordenadorController.index')
 Route.get('/coordenador/:id', 'CoordenadorController.show')
 Route.put('/coordenador/:id', 'CoordenadorController.update')
 Route.delete('/coordenador/:id', 'CoordenadorController.destroy')
+
