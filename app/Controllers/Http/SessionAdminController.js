@@ -7,7 +7,7 @@ class SessionAdminController {
 
     const autenticador = auth.authenticator('admin')
 
-    const token = await autenticador.attempt(cpf, password)    
+    const token = await autenticador.attempt(cpf, password)
 
     return token
   }

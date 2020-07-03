@@ -37,4 +37,9 @@ Route.get('/coordenador', 'CoordenadorController.index')
 Route.get('/coordenador/:id', 'CoordenadorController.show')
 Route.put('/coordenador/:id', 'CoordenadorController.update')
 Route.delete('/coordenador/:id', 'CoordenadorController.destroy')
+Route.post('/coordenador/:id/images', 'ImageController.store')
+
+Route.get('/images', 'ImageController.index');
+Route.delete('/images/:id', 'ImageController.destroy');
+Route.post('/images', 'ImageController.create');
 

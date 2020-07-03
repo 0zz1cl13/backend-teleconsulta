@@ -8,7 +8,7 @@ const Hash = use('Hash')
 
 class Coordenador extends Model {
 
-  static boot () {
+  static boot() {
     super.boot()
 
     /**
@@ -32,8 +32,12 @@ class Coordenador extends Model {
    *
    * @return {Object}
    */
-  tokens () {
+  tokens() {
     return this.hasMany('App/Models/Token')
+  }
+
+  images() {
+    return this.hasMany('App/Models/Image')
   }
 
 }
